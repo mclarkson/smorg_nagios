@@ -307,11 +307,11 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_prefix}/lib64/nagios/eventhandlers
 %{_prefix}/lib64/nagios/eventhandlers/*
 %{_sbindir}/convertcfg
-#%dir /etc/nagios
-#%dir /etc/nagios/objects
-#%defattr(644,root,root)
-#%config(noreplace) /etc/nagios/*.cfg
-#%config(noreplace) /etc/nagios/objects/*.cfg
+%dir /etc/nagios
+%dir /etc/nagios/objects
+%defattr(644,root,root)
+%config(noreplace) /etc/nagios/*.cfg
+%config(noreplace) /etc/nagios/objects/*.cfg
 %defattr(750,root,%{nsgrp})
 ###%dir /etc/nagios/private
 %defattr(640,root,%{nsgrp})
