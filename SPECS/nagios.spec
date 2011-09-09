@@ -321,6 +321,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir /var/log/nagios/archives
 %defattr(2775,%{nsusr},%{nsgrp})
 %dir /var/spool/nagios
+%dir /var/log/nagios/spool/checkresults
 %doc Changelog INSTALLING LICENSE README UPGRADING
 
 
