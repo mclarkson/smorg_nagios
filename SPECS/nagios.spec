@@ -240,12 +240,15 @@ cd ../..
 
 %install
 [ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
-install -d -m 0775 ${RPM_BUILD_ROOT}/var/spool/nagios
+#install -d -m 0775 ${RPM_BUILD_ROOT}/var/spool/nagios
 install -d -m 0755 ${RPM_BUILD_ROOT}%{_prefix}/include/nagios
 install -d -m 0755 ${RPM_BUILD_ROOT}/etc/init.d
 install -d -m 0755 ${RPM_BUILD_ROOT}/etc/logrotate.d
 install -d -m 0755 ${RPM_BUILD_ROOT}/etc/httpd/conf.d
 install -d -m 0755 ${RPM_BUILD_ROOT}/etc/nagios
+install -d -m 0755 ${RPM_BUILD_ROOT}/etc/nagios/objects
+install -d -m 0755 ${RPM_BUILD_ROOT}/var/log/nagios/rw
+install -d -m 0755 ${RPM_BUILD_ROOT}/var/log/nagios/status
 install -d -m 0755 ${RPM_BUILD_ROOT}/etc/nagios/objects
 ### install -d -m 0755 ${RPM_BUILD_ROOT}/etc/nagios/private
 make DESTDIR=${RPM_BUILD_ROOT} INSTALL_OPTS="" COMMAND_OPTS="" install
