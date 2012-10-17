@@ -1,5 +1,5 @@
 %define name nagios
-%define version 3.2.3
+%define version 3.4.1
 %define release 1
 %define nsusr nagios
 %define nsgrp nagios
@@ -39,8 +39,8 @@ Prefix: /var/spool/nagios
 Requires: gd > 1.8, zlib, libpng, libjpeg, bash, grep
 PreReq: /usr/bin/logger, chkconfig, sh-utils, shadow-utils, sed, initscripts, fileutils, mktemp
 BuildRequires: gd-devel > 1.8, zlib-devel, libpng-devel, libjpeg-devel
-Packager: Darrin Wilkinson <darrin.wilkinson@nokia.com>
-Vendor: Nokia, Advanced Operations, Instrumentation & Tools
+Packager: Mark Clarkson <mark.clarkson@smorg.co.uk>
+Vendor: Smorg
 
 
 %description
@@ -201,7 +201,7 @@ CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" \
 	--bindir=%{_prefix}/sbin \
 	--sbindir=%{_prefix}/lib64/nagios/cgi \
 	--libexecdir=%{_prefix}/lib64/nagios/plugins \
-	--datadir=%{_prefix}/share/nagios \
+	--datarootdir=%{_prefix}/share/nagios \
 	--sysconfdir=/etc/nagios \
 	--localstatedir=/var/log/nagios \
 %if ! %{PERF_EXTERNAL}
