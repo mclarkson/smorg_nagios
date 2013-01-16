@@ -1,5 +1,5 @@
 %define name nagios
-%define version 3.4.3
+%define version 3.4.4
 %define release 1
 %define nsusr nagios
 %define nsgrp nagios
@@ -348,6 +348,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Jan 16 2013 Mark Clarkson <mark.clarkson@smorg.co.uk>
+- New upstream version.
+
 * Tue Nov 22 2005 Andreas Kasenides <ank {at} cs.ucy.ac.cy>
 - packaged %{_prefix}/sbin/new_mini_epn
 - moved resource.cfg in /etc/nagios
