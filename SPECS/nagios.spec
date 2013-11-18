@@ -1,5 +1,5 @@
 %define name nagios
-%define version 3.5.0
+%define version 3.5.1
 %define release 1
 %define nsusr nagios
 %define nsgrp nagios
@@ -348,6 +348,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon Nov 18 2013 Mark Clarkson <mark.clarkson@smorg.co.uk>
+- New upstream version, 3.5.1.
+
 * Wed Apr 10 2013 Mark Clarkson <mark.clarkson@smorg.co.uk>
 - New upstream version, 3.5.0.
 
